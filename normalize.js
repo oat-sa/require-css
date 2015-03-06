@@ -116,18 +116,18 @@ define(function() {
 
     fromBase = removeDoubleSlashes(fromBase);
     toBase = removeDoubleSlashes(toBase);
-/*
     var urlRegEx = /@import\s*("([^"]*)"|'([^']*)')|url\s*\((?!#)\s*(\s*"([^"]*)"|'([^']*)'|[^\)]*\s*)\s*\)/ig;
     var result, url, source;
 
-    while (result = urlRegEx.exec(source)) {
-      url = result[3] || result[2] || result[5] || result[6] || result[4];
-      var newUrl;
-      newUrl = convertURIBase(url, fromBase, toBase);
-      var quoteLen = result[5] || result[6] ? 1 : 0;
-      source = source.substr(0, urlRegEx.lastIndex - url.length - quoteLen - 1) + newUrl + source.substr(urlRegEx.lastIndex - quoteLen - 1);
-      urlRegEx.lastIndex = urlRegEx.lastIndex + (newUrl.length - url.length);
-    }*/
+    //we dont want to normalize the CSS content
+    //while (result = urlRegEx.exec(source)) {
+      //url = result[3] || result[2] || result[5] || result[6] || result[4];
+      //var newUrl;
+      //newUrl = convertURIBase(url, fromBase, toBase);
+      //var quoteLen = result[5] || result[6] ? 1 : 0;
+      //source = source.substr(0, urlRegEx.lastIndex - url.length - quoteLen - 1) + newUrl + source.substr(urlRegEx.lastIndex - quoteLen - 1);
+      //urlRegEx.lastIndex = urlRegEx.lastIndex + (newUrl.length - url.length);
+    //}
     
     return source;
   };
